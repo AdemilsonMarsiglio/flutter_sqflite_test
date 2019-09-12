@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:test_floor/client.dart';
+import 'package:test_floor/model/client.dart';
 
 class DBProvider {
 
