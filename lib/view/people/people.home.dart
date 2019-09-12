@@ -93,7 +93,18 @@ class _PeopleHomeWidgetState extends State<PeopleHomeWidget> {
       ),
       body: RefreshIndicator(
         onRefresh: atualizaLista,
-        child: ListView.builder(
+        child: peoples.length == 0 
+        ? Center(child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset("assets/empty.png"),
+            Padding(
+              padding: EdgeInsets.only(top: 30),
+              child: Text("No data", style: TextStyle(fontSize: 18),),
+            )
+          ],
+        ),) 
+        : ListView.builder(
           padding: EdgeInsets.only(top: 10, bottom: 50),
           itemCount: peoples.length,
           itemBuilder: (context, index) {
